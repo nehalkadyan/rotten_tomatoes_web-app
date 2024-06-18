@@ -26,7 +26,7 @@ Additional Tools: JavaScript, HTML, CSS, and React Icons for enhanced UI element
 How React and Firebase Helped
 React.js: Structured the frontend codebase with reusable components, promoting efficiency and code organization. React's virtual DOM ensured fast updates and minimal page reloads, maintaining a responsive and dynamic user interface.
 
-Firebase Authentication: Ensured secure signup/signin processes, enhancing user trust and data security. Firebase Firestore enabled efficient data storage and retrieval for user-specific watchlists.
+Firebase Authentication: Ensured secure signup/sign-in processes, enhancing user trust and data security. Firebase Firestore enabled efficient data storage and retrieval for user-specific watchlists.
 
 Installation and Usage
 To run the project locally:
