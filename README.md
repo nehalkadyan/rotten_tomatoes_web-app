@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+Rotten Tomatoes Clone
+Welcome to my Rotten Tomatoes Clone project! This full-stack application replicates the popular movie and TV show review platform, allowing users to explore, filter, and add movies and shows to their watchlist.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Browse Movies and Shows: View a curated collection of movies and shows with detailed descriptions and ratings.
 
-## Available Scripts
+Filtering and Sorting: Filter movies and shows by genre and sort them based on popularity, release date, and more.
 
-In the project directory, you can run:
+Search Functionality: Search for specific movies or shows using a convenient search bar.
 
-### `npm start`
+User Authentication: Secure user authentication using Firebase. Users can sign up with email/password or seamlessly log in with Google.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Watchlist Management: Users can add movies and shows to their watchlist. Watchlist items are stored in Firebase Firestore for easy access and management.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Technologies Used
+Frontend: Built with React.js and styled using Tailwind CSS for a responsive and visually appealing user interface.
 
-### `npm test`
+Modular Structure: Leveraged React's component-based architecture for modular and reusable code, enhancing maintainability and scalability.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Single Page Application: Utilized React's virtual DOM for fast rendering and smooth navigation, providing a seamless user experience.
 
-### `npm run build`
+Firebase: Integrated Firebase for secure user authentication and real-time data storage (Firestore) for watchlist management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Additional Tools: JavaScript, HTML, CSS, and React Icons for enhanced UI elements.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+How React and Firebase Helped
+React.js: Structured the frontend codebase with reusable components, promoting efficiency and code organization. React's virtual DOM ensured fast updates and minimal page reloads, maintaining a responsive and dynamic user interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Firebase Authentication: Ensured secure signup/signin processes, enhancing user trust and data security. Firebase Firestore enabled efficient data storage and retrieval for user-specific watchlists.
 
-### `npm run eject`
+Installation and Usage
+To run the project locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone this repository.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies using npm install.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Replace the placeholder Firebase API key in firebase.js with your own Firebase API key. Ensure your Firebase project has Authentication and Firestore Database enabled.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+javascript
+Copy code
+// firebase.js
 
-## Learn More
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-### Code Splitting
+export const auth = firebaseApp.auth();
+export const db = firebaseApp.firestore();
+Make necessary configurations in your Firebase project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enable Authentication (Email/Password and Google Sign-In).
+Set up Firestore Database for storing watchlist items (movieList and showList collections).
+Start the development server using npm start.
