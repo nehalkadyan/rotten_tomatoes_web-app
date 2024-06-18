@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Filters from "../components/Filters";
 import { useDispatch, useSelector } from "react-redux";
 import ContentCard from "../components/ContentCard";
-import { selectFilters } from "../redux/content/contentSlice";
+import { selectFilters, resetFilters } from "../redux/content/contentSlice";
 
 const Movies = () => {
   const dispatch = useDispatch();
@@ -62,6 +62,7 @@ const Movies = () => {
           sort={sort}
           genre={genre}
           genreOptions={genreOptions}
+          resetFilters={resetFilters}
         />
 
         {/* Displaying movies grid */}
