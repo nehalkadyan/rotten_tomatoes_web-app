@@ -2,6 +2,7 @@ Rotten Tomatoes Clone
 Welcome to my Rotten Tomatoes Clone project! This full-stack application replicates the popular movie and TV show review platform, allowing users to explore, filter, and add movies and shows to their watchlist.
 
 Demo Video Link :- https://drive.google.com/file/d/1nK39ftqtCu7FXrWxQdYSR6eIFjVcw32P/view?usp=drive_link
+
 Live Link :- https://rotten-tomatoes-clone.web.app/
 
 Features
